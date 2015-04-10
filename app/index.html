@@ -10,10 +10,11 @@
 
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'/>
     <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css"/>
+    <link rel="stylesheet" href="./bower_components/angular-material/modules/css/angular-material-layout.css"/>
     <link rel="stylesheet" href="assets/app.css"/>
   </head>
 
-  <body ng-app="starterApp" layout="column" ng-controller="UserController as controller">
+  <body ng-app="starterApp" layout="column">
 
     <md-toolbar layout="row">
       <md-button class="menu" hide-gt-sm ng-click="controller.toggleList()" aria-label="Show User List">
@@ -75,7 +76,7 @@
           </md-list>
         </md-sidenav>
 
-        <md-content ng-view flex id="content"><!-- 
+        <md-content ng-view flex class="md-padding"><!-- 
           <md-icon md-svg-icon="{{controller.selected.avatar}}" class="avatar"></md-icon>
           <h2>{{controller.selected.name}}</h2>
           <p>{{controller.selected.content}}</p>
@@ -92,10 +93,12 @@
       <script src="./bower_components/angular-aria/angular-aria.js"></script>
       <script src="./bower_components/angular-route/angular-route.js"></script>
       <script type="text/javascript" src="./bower_components/angular-material/angular-material.js"></script>
+            <script src="./bower_components/ng-videosharing-embed/build/ng-videosharing-embed.min.js"></script>
 
-      <script src="./src/users/Users.js"></script>
-      <script src="./src/users/UserController.js"></script>
-      <script src="./src/users/UserService.js"></script>
+
+      <script src="./reels/reels.js"></script>
+      <script src="./reels/reels-controller.js"></script>
+      <script src="./reels/reels-service.js"></script>
 
       <script type="text/javascript">
 
@@ -103,7 +106,7 @@
       .module('starterApp', [
         'ngMaterial', 
         'ngRoute',
-        'users'
+        'reels'
         ])
       .config(function($mdThemingProvider, $mdIconProvider){
 
