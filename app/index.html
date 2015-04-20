@@ -27,12 +27,6 @@
 
       <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class="md-whiteframe-z2" md-component-id="left">
         <md-list>
-<!--             <md-item ng-repeat="it in controller.users">
-                <md-button ng-click="controller.selectUser(it)" ng-class="{'selected' : it === controller.selected }">
-                  <md-icon md-svg-icon="{{it.avatar}}" class="avatar"></md-icon>
-                  {{it.name}}
-                </md-button>
-              </md-item> -->
               <md-item >
                 <md-button layout="row" class="md-button" href="#/contact">
                  <md-icon md-svg-icon="./assets/svg/google_plus.svg" class="avatar"></md-icon>
@@ -75,15 +69,7 @@
 
           </md-list>
         </md-sidenav>
-
-        <md-content ng-view flex class="md-padding"><!-- 
-          <md-icon md-svg-icon="{{controller.selected.avatar}}" class="avatar"></md-icon>
-          <h2>{{controller.selected.name}}</h2>
-          <p>{{controller.selected.content}}</p>
-
-          <md-button class="share" md-no-ink ng-click="controller.share($event)" aria-label="Share">
-            <md-icon md-svg-icon="share"></md-icon>
-          </md-button> -->
+        <md-content ng-view flex class="">
         </md-content>
 
       </div>

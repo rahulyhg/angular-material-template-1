@@ -1,20 +1,64 @@
-
-<md-card ng-repeat="reel in controller.reels">
-<h3 class="md-display-1">{{reel.name}}</h3>
-	<embed-video ng-href="{{reel.url}}" width="100%" height="500"><a href="{{reel.url}}">Watch</a></embed-video>
-<md-card-footer>{{reel.description}}</md-card-footer>
- <md-card-content layout="row" layout-wrap>
- 	<div layout="row" flex="50">
- 		<h4 flex="30">Director</h4>
- 		<div flex layout="row" layout-align="start center"><div>{{reel.director}}</div></div>
- 	</div>
- 	<div layout="row" flex="50">
- 		<h4 flex="30">Role</h4>
- 		<div flex layout="row" layout-align="start center"><div>{{reel.role}}</div></div>
- 	</div>
-  	<div layout="row" flex="50">
- 		<h4 flex="30">Equipment</h4>
- 		<div flex layout="row" layout-align="start center"><div>{{reel.equipment}}</div></div>
- 	</div>
- </md-card-content>
-</md-card>
+<md-tabs md-stretch-tabs="always" class="md-primary md-hue-2">
+   <md-tab class="md-tall" label="Narrative">
+      <md-tab-body layout="row" layout-align="center start">
+         <md-content flex="80" layout-padding layout-margin>
+            <md-card ng-repeat="reel in controller.reels" layout-padding layout-margin>
+               <h3 class="md-display-1">{{reel.name}}</h3>
+               <embed-video ng-href="{{reel.url}}" width="100%" height="500"><a href="{{reel.url}}">Watch</a></embed-video>
+               <md-card-footer>{{reel.description}}</md-card-footer>
+               <md-card-content layout="row" layout-wrap>
+                  <div layout="row" flex="50">
+                     <h4 flex="30">Director</h4>
+                     <div flex layout="row" layout-align="start center">
+                        <div>{{reel.director}}</div>
+                     </div>
+                  </div>
+                  <div layout="row" flex="50">
+                     <h4 flex="30">Role</h4>
+                     <div flex layout="row" layout-align="start center">
+                        <div>{{reel.role}}</div>
+                     </div>
+                  </div>
+                  <div layout="row" flex="50">
+                     <h4 flex="30">Equipment</h4>
+                     <div flex layout="row" layout-align="start center">
+                        <div>{{reel.equipment}}</div>
+                     </div>
+                  </div>
+               </md-card-content>
+            </md-card>
+         </md-content>
+      </md-tab-body>
+   </md-tab>
+   <md-tab class="md-tall" label="Non-Fiction">
+      <md-tab-body layout="row" layout-align="center start">
+         <md-content flex="80" layout-padding layout-margin>
+            <md-card ng-repeat="reel in controller.reels" layout-padding layout-margin>
+               <h3 class="md-display-1">{{reel.name}}</h3>
+               <embed-video ng-href="{{reel.url}}" width="100%" height="500"><a href="{{reel.url}}">Watch</a></embed-video>
+               <md-card-footer>{{reel.description}}</md-card-footer>
+               <md-card-content layout="row" layout-wrap>
+                  <div layout="row" flex="50">
+                     <h4 flex="30">Director</h4>
+                     <div flex layout="row" layout-align="start center">
+                        <div>{{reel.director}}</div>
+                     </div>
+                  </div>
+                  <div layout="row" flex="50">
+                     <h4 flex="30">Role</h4>
+                     <div flex layout="row" layout-align="start center">
+                        <div>{{reel.role}}</div>
+                     </div>
+                  </div>
+                  <div layout="row" flex="50">
+                     <h4 flex="30">Equipment</h4>
+                     <div flex layout="row" layout-align="start center">
+                        <div>{{reel.equipment}}</div>
+                     </div>
+                  </div>
+               </md-card-content>
+            </md-card>
+         </md-content>
+      </md-tab-body>
+   </md-tab>
+</md-tabs>
