@@ -5,7 +5,7 @@
          .service('reelsService', ['$q', ReelsService]);
 // You can use aspect ratio tags here:  https://support.google.com/youtube/answer/146402?hl=en
   function ReelsService($q){
-    var reels = [
+    var fictionReels = [
       {
         name: 'March Family Letters - Webseries Season 1 (2015)',
         director: 'M. MacKay & S. Litt',
@@ -32,11 +32,41 @@
       }
     ];
 
+    var nonFictionReels = [
+      {
+        name: 'Faculty of Nursing - Preceptor Promo (2014)',
+        director: 'H. Wan',
+        role: 'Director & Co-Cinematographer',
+        equipment: 'Panasonic GH3/Canon 60D',
+        description: '',
+        url: 'https://youtu.be/XxuqCPDdiao'
+      },
+      {
+        name: 'GLHF A Canadian "eSports" Story (2014)',
+        director: '',
+        role: 'Co-Cinematographer',
+        equipment: 'Canon 60D/7D',
+        description: 'PREMIERED AT 2014 CANNES COURT MÉTRAGE',
+        url: 'https://youtu.be/49D9bI38K1U'
+      },
+      {
+        name: 'Intel Canada @ Toronto Digifest (2014)',
+        director: 'H. Wan',
+        role: "Director & Co-Cinematographer",
+        equipment: 'Panasonic GH3/Canon 60D',
+        description: '',
+        url: 'https://youtu.be/ypeuFt-l2Dk'
+      }
+    ];
+
     // Promise-based API
     return {
-      loadReels : function() {
+      loadFictionReels : function() {
         // Simulate async nature of real remote calls
-        return $q.when(reels);
+        return $q.when(fictionReels);
+      },
+      loadNonfictionReels:function(){
+        return $q.when(nonFictionReels);
       }
     };
   }

@@ -20,11 +20,15 @@
 
     // Load all registered reels
 
-    reelsService
-    .loadReels()
+    reelsService.loadFictionReels()
     .then( function( reels ) {
       self.reels    = [].concat(reels);
     });
+
+    reelsService.loadNonfictionReels()
+    .then(function(reels){
+      self.nonFictionReels=reels;
+    })
 
   }
 
