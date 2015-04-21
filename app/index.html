@@ -51,8 +51,8 @@
                 <md-button layout-fill layout="row" layout-align="center center" class="md-button" href="#/qualifications">
                  <md-icon md-svg-icon="./assets/svg/google_plus.svg" class="avatar"></md-icon>
                  <div flex layout="column" layout-align="center start">
-                   <span flex class="md-body-1">Qualifications</span>
-                   <small flex class="md-caption">Why I am the best</small>
+                   <span flex class="md-body-1">About</span>
+                   <small flex class="md-caption">My qualifications</small>
                  </div>
                </md-button>
              </md-list-item>
@@ -79,12 +79,16 @@
       <script src="./bower_components/angular-aria/angular-aria.js"></script>
       <script src="./bower_components/angular-route/angular-route.js"></script>
       <script type="text/javascript" src="./bower_components/angular-material/angular-material.js"></script>
-            <script src="./bower_components/ng-videosharing-embed/build/ng-videosharing-embed.min.js"></script>
+      <script src="./bower_components/ng-videosharing-embed/build/ng-videosharing-embed.min.js"></script>
 
 
       <script src="./reels/reels.js"></script>
       <script src="./reels/reels-controller.js"></script>
       <script src="./reels/reels-service.js"></script>
+
+      <script src="./about/about.js"></script>
+      <script src="./about/about-controller.js"></script>
+      <script src="./about/about-service.js"></script>
 
       <script type="text/javascript">
 
@@ -92,7 +96,8 @@
       .module('starterApp', [
         'ngMaterial', 
         'ngRoute',
-        'reels'
+        'reels',
+        'about'
         ])
       .config(function($mdThemingProvider, $mdIconProvider){
 
@@ -115,8 +120,8 @@
 
         $routeProvider.when('/', {templateUrl:'contact.html'});
         $routeProvider.when('/contact', {templateUrl:'contact.html'});
-        $routeProvider.when('/reels', {templateUrl:'reels/reels.html', controller:'ReelsController as controller'});
-        $routeProvider.when('/qualifications', {templateUrl:'qualifications.html'});
+        $routeProvider.when('/reels', {templateUrl:'reels/reels.html', controller:'ReelsController as reelsController'});
+        $routeProvider.when('/qualifications', {templateUrl:'about/about.html', controller:'AboutController as aboutController'});
         $routeProvider.when('/equipments', {templateUrl:'equipments.html'});
         // $routeProvider.otherwise({redirectTo:'/'});
 
