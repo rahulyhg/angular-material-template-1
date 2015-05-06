@@ -15,65 +15,81 @@
 </head>
 
 <body ng-app="starterApp" layout="column">
+<md-toolbar layout="row" layout-align="center" class="md-tall md-primary">
+    <div flex flex-sm="100" flex-gt-sm="95" flex-gt-md="80" layout="row" layout-align="start end">
+        <div><h2 class="md-display-1">.Howard Wan</h2></div>
 
-<md-toolbar layout="column" layout-align="center space-around" class="md-primary md-tall">
-    <div flex layout="row" layout-align="center end">
-        <md-button class="menu" hide-gt-sm ng-click="controller.toggleList()" aria-label="Show User List">
-            <md-icon md-svg-icon="menu"></md-icon>
-        </md-button>
-        <h1 class="md-display-1">Howard Wan</h1>
+        <div flex layout="row" layout-align="end end">
+            <div flex="65">
+                <md-tabs md-selected="currentTab" md-stretch-tabs="always" class="md-primary md-hue-2">
+                    <md-tab>
+                        <md-tab-label>Contact</md-tab-label>
+                    </md-tab>
+                    <md-tab>
+                        <md-tab-label>Reels</md-tab-label>
+                    </md-tab>
+                    <md-tab>
+                        <md-tab-label>About</md-tab-label>
+                    </md-tab>
+                    <md-tab href="#/equipment">
+                        <md-tab-label>Equipment</md-tab-label>
+                    </md-tab>
+
+                </md-tabs>
+            </div>
+        </div>
     </div>
 </md-toolbar>
 
 <div flex layout="row">
 
-    <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class="md-whiteframe-z2" md-component-id="left" layout="column"
-                layout-align="start">
-        <md-list style="padding-top:15%">
-            <md-list-item class="md-1-line" layout="row">
-                <md-button layout-fill layout="row" layout-align="center center" class="md-primary md-hue-2"
-                           href="#/contact">
-                    <md-icon md-svg-icon="./assets/svg/google_plus.svg" class="avatar"></md-icon>
-                    <div flex layout="column" layout-align="center start">
-                        <span flex class="md-body-1">Contact</span>
-                        <small flex class="md-caption">Contact Howard</small>
-                    </div>
-                </md-button>
-            </md-list-item>
-            <md-divider md-inset></md-divider>
-            <md-list-item class="md-1-line" layout="row">
-                <md-button layout-fill layout="row" layout-align="center center" class="md-button" href="#/reels">
-                    <md-icon md-svg-icon="./assets/svg/google_plus.svg" class="avatar"></md-icon>
-                    <div flex layout="column" layout-align="center start">
-                        <span flex class="md-body-1">Reels</span>
-                        <small flex class="md-caption">Narrative and Non-Fiction</small>
-                    </div>
-                </md-button>
-            </md-list-item>
-            <md-divider md-inset></md-divider>
-            <md-list-item class="md-1-line" layout="row">
-                <md-button layout-fill layout="row" layout-align="center center" class="md-button"
-                           href="#/qualifications">
-                    <md-icon md-svg-icon="./assets/svg/google_plus.svg" class="avatar"></md-icon>
-                    <div flex layout="column" layout-align="center start">
-                        <span flex class="md-body-1">About</span>
-                        <small flex class="md-caption">My qualifications</small>
-                    </div>
-                </md-button>
-            </md-list-item>
-            <md-divider md-inset></md-divider>
-            <md-list-item class="md-1-line" layout="row">
-                <md-button layout-fill layout="row" layout-align="center center" class="md-button" href="#/equipments">
-                    <md-icon md-svg-icon="./assets/svg/google_plus.svg" class="avatar"></md-icon>
-                    <div flex layout="column" layout-align="center start">
-                        <span flex class="md-body-1">Equipments</span>
-                        <small flex class="md-caption">What I use to do my work</small>
-                    </div>
-                </md-button>
-            </md-list-item>
-            <md-divider md-inset></md-divider>
-        </md-list>
-    </md-sidenav>
+    <!--<md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class="md-whiteframe-z2" md-component-id="left" layout="column"-->
+    <!--layout-align="start">-->
+    <!--<md-list style="padding-top:15%">-->
+    <!--<md-list-item class="md-1-line" layout="row">-->
+    <!--<md-button layout-fill layout="row" layout-align="center center" class="md-primary md-hue-2"-->
+    <!--href="#/contact">-->
+    <!--<md-icon md-svg-icon="./assets/svg/google_plus.svg" class="avatar"></md-icon>-->
+    <!--<div flex layout="column" layout-align="center start">-->
+    <!--<span flex class="md-body-1">Contact</span>-->
+    <!--<small flex class="md-caption">Contact Howard</small>-->
+    <!--</div>-->
+    <!--</md-button>-->
+    <!--</md-list-item>-->
+    <!--<md-divider md-inset></md-divider>-->
+    <!--<md-list-item class="md-1-line" layout="row">-->
+    <!--<md-button layout-fill layout="row" layout-align="center center" class="md-button" href="#/reels">-->
+    <!--<md-icon md-svg-icon="./assets/svg/google_plus.svg" class="avatar"></md-icon>-->
+    <!--<div flex layout="column" layout-align="center start">-->
+    <!--<span flex class="md-body-1">Reels</span>-->
+    <!--<small flex class="md-caption">Narrative and Non-Fiction</small>-->
+    <!--</div>-->
+    <!--</md-button>-->
+    <!--</md-list-item>-->
+    <!--<md-divider md-inset></md-divider>-->
+    <!--<md-list-item class="md-1-line" layout="row">-->
+    <!--<md-button layout-fill layout="row" layout-align="center center" class="md-button"-->
+    <!--href="#/qualifications">-->
+    <!--<md-icon md-svg-icon="./assets/svg/google_plus.svg" class="avatar"></md-icon>-->
+    <!--<div flex layout="column" layout-align="center start">-->
+    <!--<span flex class="md-body-1">About</span>-->
+    <!--<small flex class="md-caption">My qualifications</small>-->
+    <!--</div>-->
+    <!--</md-button>-->
+    <!--</md-list-item>-->
+    <!--<md-divider md-inset></md-divider>-->
+    <!--<md-list-item class="md-1-line" layout="row">-->
+    <!--<md-button layout-fill layout="row" layout-align="center center" class="md-button" href="#/equipments">-->
+    <!--<md-icon md-svg-icon="./assets/svg/google_plus.svg" class="avatar"></md-icon>-->
+    <!--<div flex layout="column" layout-align="center start">-->
+    <!--<span flex class="md-body-1">Equipments</span>-->
+    <!--<small flex class="md-caption">What I use to do my work</small>-->
+    <!--</div>-->
+    <!--</md-button>-->
+    <!--</md-list-item>-->
+    <!--<md-divider md-inset></md-divider>-->
+    <!--</md-list>-->
+    <!--</md-sidenav>-->
     <md-content ng-view flex layout="row">
     </md-content>
 
@@ -120,7 +136,7 @@
                         .icon("phone", "./assets/svg/phone.svg", 512);
 
                 $mdThemingProvider.theme('default')
-                        .primaryPalette('blue-grey')
+                        .primaryPalette('blue')
                         .accentPalette('red');
                 // .backgroundPalette('indigo');
 
