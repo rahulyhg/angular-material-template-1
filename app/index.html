@@ -16,11 +16,13 @@
 
 <body ng-app="starterApp" layout="column">
 <md-toolbar layout="row" layout-align="center" class="md-tall md-primary">
-    <div flex flex-sm="100" flex-gt-sm="95" flex-gt-md="80" layout="row" layout-align="start end">
-        <div><h2 class="md-display-1">.Howard Wan</h2></div>
+    <div flex layout="row" layout-align="start end">
+        <div layout="row" flex layout-align="center">
+                <h2 flex-offset="5" class="md-display-1">.Viridian Films</h2>
+        </div>
 
-        <div flex layout="row" layout-align="end end">
-            <div flex="65">
+        <div flex layout="row" layout-align="center">
+            <div flex="80">
                 <md-tabs md-selected="currentTab" md-stretch-tabs="always" class="md-primary md-hue-2">
                     <md-tab>
                         <md-tab-label><span ui-sref="contact">Contact</span></md-tab-label>
@@ -102,7 +104,7 @@
                             url: '/',
                             templateUrl: 'contact.html'
                         })
-                        .state('contact',{
+                        .state('contact', {
                             url: '/contact',
                             templateUrl: 'contact.html'
                         })
@@ -116,7 +118,7 @@
                             templateUrl: 'about/about.html',
                             controller: 'AboutController as aboutController'
                         })
-                        .state('equipment',{
+                        .state('equipment', {
                             url: '/equipments',
                             templateUrl: 'equipments/equipments.html',
                             controller: 'equipments.controller as equipmentController'
