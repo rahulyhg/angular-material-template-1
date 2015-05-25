@@ -21,7 +21,8 @@
 
         equipmentsService.load()
             .then( function( equipments ) {
-                self.equipments    = equipments;
+                self.equipments1    = equipments;
+                self.equipments2    = equipments;
             });
 
     }
