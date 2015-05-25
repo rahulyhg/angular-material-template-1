@@ -1,11 +1,12 @@
 <div flex="100">
+<md-toolbar class="md-primary md-hue-2"></md-toolbar>
     <div layout="row" style="width:90%;margin-left: auto; margin-right: auto; margin-top:3rem">
         <div layout="column" layout-align="start center" flex="50">
             <div ng-repeat="equipmentGroup in equipmentController.equipments1" layout="row"
                  layout-align="center start" layout-fill class="equipment-list__hide-odd">
                 <div flex="80" layout-margin layout-padding>
                     <div class="md-whiteframe-z1">
-                        <md-toolbar class="md-primary md-hue-2">
+                        <md-toolbar class="md-accent">
                             <h1 class="md-title">{{equipmentGroup.name}}</h1>
                         </md-toolbar>
                         <md-divider></md-divider>
@@ -29,7 +30,7 @@
 
                 <div flex="80" layout-margin layout-padding>
                     <div class="md-whiteframe-z1">
-                        <md-toolbar class="md-primary md-hue-2">
+                        <md-toolbar class="md-accent">
                             <h1 class="md-title">{{equipmentGroup.name}}</h1>
                         </md-toolbar>
                         <md-divider></md-divider>
